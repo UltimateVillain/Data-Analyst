@@ -1,0 +1,204 @@
+-- Products Table
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY ,
+    ProductName VARCHAR(255),
+    Description TEXT,
+    UnitPrice DECIMAL(10, 2),
+    InventoryLevel INT
+);
+insert values
+INSERT INTO Products (ProductID,ProductName, Description, UnitPrice)
+VALUES
+('B01ABCD123','Blue Backpack', 'A spacious backpack with multiple compartments for organizing your belongings during travel or daily commutes.', 49.99),
+('B02EFGH456','Wireless Headphones', 'Enjoy wireless freedom with these comfortable headphones, perfect for listening to music on the go.', 79.99),
+('B03IJKL789','Stainless Steel Water Bottle', 'Stay hydrated throughout the day with this durable stainless steel water bottle that keeps your drinks cold or hot.', 19.99),
+('B04MNOP012','Laptop Sleeve', 'Protect your laptop from scratches and bumps with this sleek and stylish sleeve made from high-quality materials.', 29.99),
+('B05QRST345','Fitness Tracker Watch', 'Monitor your fitness goals and track your activity with this advanced tracker watch that syncs with your smartphone.', 99.99),
+('B06UVWX678','Leather Wallet', 'Keep your cards and cash organized in this luxurious leather wallet with multiple card slots and a coin pocket.', 39.99),
+('B07YZAB901','Portable Charger', 'Never run out of battery on your devices with this portable charger that fits easily in your pocket or bag.', 24.99),
+('B08CDE0123','Travel Mug', 'Take your favorite beverage with you wherever you go with this insulated travel mug that keeps drinks hot or cold.', 14.99),
+('B09FGHI345','Yoga Mat', 'Enhance your yoga practice with this comfortable and durable mat that provides cushioning and stability.', 34.99),
+(' B10JKLM678','Bluetooth Speaker', 'Enjoy high-quality sound with this portable Bluetooth speaker that connects wirelessly to your devices.', 59.99),
+('B11NOPQ901','Digital Camera', 'Capture precious moments with stunning clarity using this digital camera with advanced features and autofocus.', 199.99),
+('B12RSTU234','Running Shoes', 'Achieve your fitness goals in style with these lightweight and supportive running shoes designed for performance.', 89.99),
+('B13VWXYZ567','Kitchen Knife Set', 'Upgrade your kitchen with this premium knife set featuring sharp stainless steel blades and ergonomic handles.', 79.99),
+('B14ABCDE890','Smart Thermostat', 'Control your home's temperature with ease using this smart thermostat that learns your preferences and adjusts accordingly.', 149.99),
+('B15EFGHI123','Coffee Maker', 'Brew delicious coffee at home with this programmable coffee maker that brews multiple cup sizes.', 129.99),
+('B16JKLM456','External Hard Drive', 'Keep your important files and documents secure with this reliable external hard drive that offers ample storage space.', 79.99),
+('B17MNOPQ789','Wireless Mouse', 'Work wirelessly and comfortably with this ergonomic wireless mouse that provides precise tracking and long battery life.', 29.99),
+('B18RSTUV012','Electric Toothbrush', 'Maintain good oral hygiene with this electric toothbrush that removes plaque and improves gum health.', 49.99),
+('B19WXYZ345','Messenger Bag', 'Carry your essentials in style with this versatile messenger bag featuring multiple compartments and a padded laptop sleeve.', 69.99),
+('B20ABCDE678','Desk Organizer', 'Keep your desk clutter-free with this practical organizer that stores pens, notepads, and other office supplies.', 19.99);
+
+-- Suppliers Table
+CREATE TABLE Suppliers (
+    SupplierID INT PRIMARY KEY ,
+    SupplierName VARCHAR(255),
+    ContactName VARCHAR(255),
+    Phone VARCHAR(20),
+    Email VARCHAR(255)
+);
+-- Insert 20 random values into the Suppliers table
+INSERT INTO Suppliers (SupplierID,SupplierName, ContactName, Phone, Email)
+VALUES
+('S01ABC1234','Supplier ABC', 'Contact XYZ', '123-456-7890', 'supplier1@example.com'),
+('S02DEF5678','Supplier DEF', 'Contact UVW', '234-567-8901', 'supplier2@example.com'),
+('S03GHI9012','Supplier GHI', 'Contact RST', '345-678-9012', 'supplier3@example.com'),
+('S04JKL3456','Supplier JKL', 'Contact QPO', '456-789-0123', 'supplier4@example.com'),
+('S05MNO7890','Supplier MNO', 'Contact NML', '567-890-1234', 'supplier5@example.com'),
+('S06PQR1234','Supplier PQR', 'Contact KJI', '678-901-2345', 'supplier6@example.com'),
+('S07STU5678','Supplier STU', 'Contact HGF', '789-012-3456', 'supplier7@example.com'),
+('S08VWX9012','Supplier VWX', 'Contact EDC', '890-123-4567', 'supplier8@example.com'),
+('S09YZA3456','Supplier YZA', 'Contact TSB', '901-234-5678', 'supplier9@example.com'),
+('S10BCD7890','Supplier BCD', 'Contact RQA', '012-345-6789', 'supplier10@example.com'),
+('S11EFG1234','Supplier EFG', 'Contact PON', '111-222-3333', 'supplier11@example.com'),
+('S12HIJ5678','Supplier HIJ', 'Contact MNL', '222-333-4444', 'supplier12@example.com'),
+('S13KLM9012','Supplier KLM', 'Contact KJI', '333-444-5555', 'supplier13@example.com'),
+('S14NOP3456','Supplier NOP', 'Contact HGF', '444-555-6666', 'supplier14@example.com'),
+('S15QRS7890','Supplier QRS', 'Contact EDC', '555-666-7777', 'supplier15@example.com'),
+('S16TUV1234','Supplier TUV', 'Contact BCA', '666-777-8888', 'supplier16@example.com'),
+('S17VWX5678','Supplier VWX', 'Contact ZYX', '777-888-9999', 'supplier17@example.com'),
+('S18YZA9012','Supplier YZA', 'Contact WVT', '888-999-0000', 'supplier18@example.com'),
+('S19BCD3456','Supplier BCD', 'Contact SRQ', '999-000-1111', 'supplier19@example.com'),
+('S20EFG7890','Supplier EFG', 'Contact PON', '000-111-2222', 'supplier20@example.com');
+
+-- Warehouses Table
+CREATE TABLE Warehouses (
+    WarehouseID INT PRIMARY KEY ,
+    WarehouseName VARCHAR(255),
+    Location VARCHAR(255)
+);
+INSERT INTO Warehouses (WarehouseID, WarehouseName, Location)
+VALUES
+(1, 'Warehouse 1', 'Location 1'),
+(2, 'Warehouse 2', 'Location 2'),
+(3, 'Warehouse 3', 'Location 3'),
+(4, 'Warehouse 4', 'Location 4'),
+(5, 'Warehouse 5', 'Location 5'),
+(6, 'Warehouse 6', 'Location 6'),
+(7, 'Warehouse 7', 'Location 7'),
+(8, 'Warehouse 8', 'Location 8'),
+(9, 'Warehouse 9', 'Location 9'),
+(10, 'Warehouse 10', 'Location 10'),
+(11, 'Warehouse 11', 'Location 11'),
+(12, 'Warehouse 12', 'Location 12'),
+(13, 'Warehouse 13', 'Location 13'),
+(14, 'Warehouse 14', 'Location 14'),
+(15, 'Warehouse 15', 'Location 15'),
+(16, 'Warehouse 16', 'Location 16'),
+(17, 'Warehouse 17', 'Location 17'),
+(18, 'Warehouse 18', 'Location 18'),
+(19, 'Warehouse 19', 'Location 19'),
+(20, 'Warehouse 20', 'Location 20');
+
+
+-- Inventory Transactions Table
+CREATE TABLE InventoryTransactions (
+    TransactionID INT PRIMARY KEY,
+    ProductID INT,
+    SupplierID INT,
+    WarehouseID INT,
+    TransactionType ENUM('Sale', 'Replenishment'),
+    Quantity INT,
+    TransactionDate DATE,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID),
+    FOREIGN KEY (WarehouseID) REFERENCES Warehouses(WarehouseID)
+);
+
+INSERT INTO InventoryTransactions (TransactionID, ProductID, SupplierID, WarehouseID, TransactionType, Quantity, TransactionDate)
+VALUES
+(1, 1, 1, 1, 'Sale', 10, '2023-01-01'),
+(2, 2, 2, 2, 'Replenishment', 20, '2023-01-02'),
+(3, 3, 3, 3, 'Sale', 15, '2023-01-03'),
+(4, 4, 4, 4, 'Replenishment', 25, '2023-01-04'),
+(5, 5, 5, 5, 'Sale', 30, '2023-01-05'),
+(6, 6, 6, 6, 'Replenishment', 35, '2023-01-06'),
+(7, 7, 7, 7, 'Sale', 40, '2023-01-07'),
+(8, 8, 8, 8, 'Replenishment', 45, '2023-01-08'),
+(9, 9, 9, 9, 'Sale', 50, '2023-01-09'),
+(10, 10, 10, 10, 'Replenishment', 55, '2023-01-10'),
+(11, 11, 11, 11, 'Sale', 60, '2023-01-11'),
+(12, 12, 12, 12, 'Replenishment', 65, '2023-01-12'),
+(13, 13, 13, 13, 'Sale', 70, '2023-01-13'),
+(14, 14, 14, 14, 'Replenishment', 75, '2023-01-14'),
+(15, 15, 15, 15, 'Sale', 80, '2023-01-15'),
+(16, 16, 16, 16, 'Replenishment', 85, '2023-01-16'),
+(17, 17, 17, 17, 'Sale', 90, '2023-01-17'),
+(18, 18, 18, 18, 'Replenishment', 95, '2023-01-18'),
+(19, 19, 19, 19, 'Sale', 100, '2023-01-19'),
+(20, 20, 20, 20, 'Replenishment', 105, '2023-01-20');
+
+Query to track inventory levels:
+
+SELECT ProductID, SUM(Quantity) AS TotalInventory
+FROM InventoryTransactions
+GROUP BY ProductID;
+
+Query to track reorder points:
+
+SELECT ProductID, MIN(Quantity) AS ReorderPoint
+FROM InventoryTransactions
+GROUP BY ProductID;
+
+Query to track stockouts:
+
+
+SELECT ProductID
+FROM InventoryTransactions
+WHERE Quantity <= 0;
+
+Implementing Triggers or Stored Procedures:
+Example of a trigger to update inventory levels after a transaction:
+
+
+CREATE TRIGGER UpdateInventory
+AFTER INSERT ON InventoryTransactions
+FOR EACH ROW
+BEGIN
+    IF NEW.TransactionType = 'Sale' THEN
+        UPDATE Products
+        SET InventoryLevel = InventoryLevel - NEW.Quantity
+        WHERE ProductID = NEW.ProductID;
+    ELSEIF NEW.TransactionType = 'Replenishment' THEN
+        UPDATE Products
+        SET InventoryLevel = InventoryLevel + NEW.Quantity
+        WHERE ProductID = NEW.ProductID;
+    END IF;
+END;
+
+Analyzing Historical Inventory Data:
+Example query to identify slow-moving items:
+
+SELECT ProductID, AVG(Quantity) AS AvgQuantity
+FROM InventoryTransactions
+GROUP BY ProductID
+HAVING AvgQuantity < 10; 
+
+Generating Reports:
+Example report query to monitor inventory turnover:
+
+SELECT ProductID, SUM(Quantity) AS TotalSales
+FROM InventoryTransactions
+WHERE TransactionType = 'Sale'
+GROUP BY ProductID;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
