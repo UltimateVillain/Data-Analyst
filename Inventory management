@@ -1,0 +1,203 @@
+-- Products Table
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY ,
+    ProductName VARCHAR(255),
+    Description TEXT,
+    UnitPrice DECIMAL(10, 2),
+    InventoryLevel INT
+);
+insert values
+INSERT INTO Products (ProductID,ProductName, Description, UnitPrice)
+VALUES
+('B01ABCD123','Blue Backpack', 'A spacious backpack with multiple compartments for organizing your belongings during travel or daily commutes.', 49.99),
+('B02EFGH456','Wireless Headphones', 'Enjoy wireless freedom with these comfortable headphones, perfect for listening to music on the go.', 79.99),
+('B03IJKL789','Stainless Steel Water Bottle', 'Stay hydrated throughout the day with this durable stainless steel water bottle that keeps your drinks cold or hot.', 19.99),
+('B04MNOP012','Laptop Sleeve', 'Protect your laptop from scratches and bumps with this sleek and stylish sleeve made from high-quality materials.', 29.99),
+('B05QRST345','Fitness Tracker Watch', 'Monitor your fitness goals and track your activity with this advanced tracker watch that syncs with your smartphone.', 99.99),
+('B06UVWX678','Leather Wallet', 'Keep your cards and cash organized in this luxurious leather wallet with multiple card slots and a coin pocket.', 39.99),
+('B07YZAB901','Portable Charger', 'Never run out of battery on your devices with this portable charger that fits easily in your pocket or bag.', 24.99),
+('B08CDE0123','Travel Mug', 'Take your favorite beverage with you wherever you go with this insulated travel mug that keeps drinks hot or cold.', 14.99),
+('B09FGHI345','Yoga Mat', 'Enhance your yoga practice with this comfortable and durable mat that provides cushioning and stability.', 34.99),
+(' B10JKLM678','Bluetooth Speaker', 'Enjoy high-quality sound with this portable Bluetooth speaker that connects wirelessly to your devices.', 59.99),
+('B11NOPQ901','Digital Camera', 'Capture precious moments with stunning clarity using this digital camera with advanced features and autofocus.', 199.99),
+('B12RSTU234','Running Shoes', 'Achieve your fitness goals in style with these lightweight and supportive running shoes designed for performance.', 89.99),
+('B13VWXYZ567','Kitchen Knife Set', 'Upgrade your kitchen with this premium knife set featuring sharp stainless steel blades and ergonomic handles.', 79.99),
+('B14ABCDE890','Smart Thermostat', 'Control your home's temperature with ease using this smart thermostat that learns your preferences and adjusts accordingly.', 149.99),
+('B15EFGHI123','Coffee Maker', 'Brew delicious coffee at home with this programmable coffee maker that brews multiple cup sizes.', 129.99),
+('B16JKLM456','External Hard Drive', 'Keep your important files and documents secure with this reliable external hard drive that offers ample storage space.', 79.99),
+('B17MNOPQ789','Wireless Mouse', 'Work wirelessly and comfortably with this ergonomic wireless mouse that provides precise tracking and long battery life.', 29.99),
+('B18RSTUV012','Electric Toothbrush', 'Maintain good oral hygiene with this electric toothbrush that removes plaque and improves gum health.', 49.99),
+('B19WXYZ345','Messenger Bag', 'Carry your essentials in style with this versatile messenger bag featuring multiple compartments and a padded laptop sleeve.', 69.99),
+('B20ABCDE678','Desk Organizer', 'Keep your desk clutter-free with this practical organizer that stores pens, notepads, and other office supplies.', 19.99);
+
+-- Suppliers Table
+CREATE TABLE Suppliers (
+    SupplierID INT PRIMARY KEY ,
+    SupplierName VARCHAR(255),
+    ContactName VARCHAR(255),
+    Phone VARCHAR(20),
+    Email VARCHAR(255)
+);
+-- Insert 20 random values into the Suppliers table
+INSERT INTO Suppliers (SupplierID,SupplierName, ContactName, Phone, Email)
+VALUES
+('S01ABC1234','SwiftCart', 'Emily Johnson', '123-456-7890', 'EmilyJohnson@SwiftCart.com'),
+('S02DEF5678','TechNex Marketplace', 'Michael Smith', '234-567-8901', 'Michael.Smith@TechNex.com'),
+('S03GHI9012','EverGlobe Retail', 'Sarah Brown', '345-678-9012', 'Sarah.Brown@EverGlobe.com'),
+('S04JKL3456','NovaTrade Ventures', 'David Jones', '456-789-0123', 'David.Jones@NovaTrade.com'),
+('S05MNO7890','EliteShore Emporium','Jessica Davis', '567-890-1234', 'Jessica.Davis@EliteShore.com'),
+('S06PQR1234','ZenithExchange', 'Christopher Martinez', '678-901-2345', 'Christopher.Martinez@ZenithExchange.com'),
+('S07STU5678','CrystalWave Commerce', 'Samantha Wilson', '789-012-3456', 'Samantha.Wilson@CrystalWave.com'),
+('S08VWX9012','PrimePulse Trading', 'Matthew Taylor', '890-123-4567', 'Matthew.Taylor@PrimePulse.com'),
+('S09YZA3456','BrightBay Bazaar', 'Olivia Anderson', '901-234-5678', 'Olivia.Anderson@BrightBay.com'),
+('S10BCD7890','SkyHaven Merchants', 'Daniel Garcia', '012-345-6789', 'Daniel.Garcia@SkyHaven.com'),
+('S11EFG1234','BlazeBloom Market', 'Ashley Thompson', '111-222-3333', 'Ashley.Thompson@BlazeBloom.com'),
+('S12HIJ5678','InfiniteGrove Stores', 'William Thomas', '222-333-4444', 'William.Thomas@InfiniteGrove.com'),
+('S13KLM9012','LuminaLink Commerce', 'Jennifer Lopez', '333-444-5555', 'Jennifer Lopez@LuminaLink.com'),
+('S14NOP3456','ApexArcade Ventures', 'Ryan Harris', '444-555-6666', 'Ryan.Harris@ApexArcade.com'),
+('S15QRS7890','StellarSail Retail', 'Elizabeth Clark', '555-666-7777', 'Elizabeth.Clark@StellarSail.com'),
+('S16TUV1234','HorizonHub Marketplace', 'Nicholas White', '666-777-8888', 'Nicholas.White@HorizonHub.com'),
+('S17VWX5678','NexusNest Trading', 'Amanda Lee', '777-888-9999', 'Amanda.Lee@NexusNet.com'),
+('S18YZA9012','QuantumQuest Stores', 'Joshua Rodriguez', '888-999-0000', 'Joshua.Rodriguez@QuantumQuest.com'),
+('S19BCD3456','AuroraAisle Commerce', 'Lauren Miller', '999-000-1111', 'Lauren.Miller@AuroraAisle.com'),
+('S20EFG7890','FusionFleet Emporium', 'James Jackson', '000-111-2222', 'James.Jackson@FusionFleet.com');
+
+-- Warehouses Table
+CREATE TABLE Warehouses (
+    WarehouseID INT PRIMARY KEY ,
+    WarehouseName VARCHAR(255),
+    Location VARCHAR(255)
+);
+INSERT INTO Warehouses (WarehouseID, WarehouseName, Location)
+VALUES
+(1, 'Warehouse 1', 'Seattle'),
+(2, 'Warehouse 2', 'Miami'),
+(3, 'Warehouse 3', 'Denver'),
+(4, 'Warehouse 4', 'Austin'),
+(5, 'Warehouse 5', 'Boston'),
+(6, 'Warehouse 6', 'San Diego'),
+(7, 'Warehouse 7', 'Chicago'),
+(8, 'Warehouse 8', 'Nashville'),
+(9, 'Warehouse 9', 'Portland'),
+(10, 'Warehouse 10', 'Atlanta'),
+(11, 'Warehouse 11', 'Phoenix'),
+(12, 'Warehouse 12', 'New Orleans'),
+(13, 'Warehouse 13', 'Minneapolis'),
+(14, 'Warehouse 14', 'Kansas City'),
+(15, 'Warehouse 15', 'Las Vegas'),
+(16, 'Warehouse 16', 'Honolulu'),
+(17, 'Warehouse 17', 'Philadelphia'),
+(18, 'Warehouse 18', 'Salt Lake City'),
+(19, 'Warehouse 19', 'Detroit'),
+(20, 'Warehouse 20', 'Charlotte');
+
+
+-- Inventory Transactions Table
+CREATE TABLE InventoryTransactions (
+    TransactionID INT PRIMARY KEY,
+    ProductID INT,
+    SupplierID INT,
+    WarehouseID INT,
+    TransactionType ENUM('Sale', 'Replenishment'),
+    Quantity INT,
+    TransactionDate DATE,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID),
+    FOREIGN KEY (WarehouseID) REFERENCES Warehouses(WarehouseID)
+);
+
+INSERT INTO InventoryTransactions (TransactionID, ProductID, SupplierID, WarehouseID, TransactionType, Quantity, TransactionDate)
+VALUES
+('TRXID5732', 'B01ABCD123', 'S01ABC1234', 1, 'Sale', 10, '2023-01-01'),
+('TRXID8916', 'B02EFGH456', 'S02DEF5678', 2, 'Replenishment', 20, '2023-01-02'),
+('TRXID2467', 'B03IJKL789', 'S03GHI9012', 3, 'Sale', 15, '2023-01-03'),
+('TRXID4109', 'B04MNOP012', 'S04JKL3456', 4, 'Replenishment', 25, '2023-01-04'),
+('TRXID7325', 'B05QRST345', 'S05MNO7890', 5, 'Sale', 30, '2023-01-05'),
+('TRXID1598', 'B06UVWX678', 'S06PQR1234', 6, 'Replenishment', 35, '2023-01-06'),
+('TRXID6243', 'B07YZAB901', 'S07STU5678', 7, 'Sale', 40, '2023-01-07'),
+('TRXID9357', 'B08CDE0123', 'S08VWX9012', 8, 'Replenishment', 45, '2023-01-08'),
+('TRXID3074', 'B09FGHI345', 'S09YZA3456', 9, 'Sale', 50, '2023-01-09'),
+('TRXID4821', 'B10JKLM678', 'S10BCD7890', 10, 'Replenishment', 55, '2023-01-10'),
+('TRXID8163', 'B11NOPQ901', 'S11EFG1234', 11, 'Sale', 60, '2023-01-11'),
+('TRXID2376', 'B12RSTU234', 'S12HIJ5678', 12, 'Replenishment', 65, '2023-01-12'),
+('TRXID6954', 'B13VWXYZ567', 'S13KLM9012', 13, 'Sale', 70, '2023-01-13'),
+('TRXID1042', 'B14ABCDE890', 'S14NOP3456', 14, 'Replenishment', 75, '2023-01-14'),
+('TRXID3705', 'B15EFGHI123', 'S15QRS7890', 15, 'Sale', 80, '2023-01-15'),
+('TRXID5829', 'B16JKLM456', 'S16TUV1234', 16, 'Replenishment', 85, '2023-01-16'),
+('TRXID9234', 'B17MNOPQ789', 'S17VWX5678', 17, 'Sale', 90, '2023-01-17'),
+('TRXID4156', 'B18RSTUV012', 'S01ABC1234', 18, 'Replenishment', 95, '2023-01-18'),
+('TRXID7610', 'B19WXYZ345', 'S02DEF5678', 19, 'Sale', 100, '2023-01-19'),
+('TRXID2985', 'B20ABCDE678', 'S03GHI9012', 20, 'Replenishment', 105, '2023-01-20');
+
+Query to track inventory levels:
+
+SELECT ProductID, SUM(Quantity) AS TotalInventory
+FROM InventoryTransactions
+GROUP BY ProductID;
+
+Query to track reorder points:
+
+SELECT ProductID, MIN(Quantity) AS ReorderPoint
+FROM InventoryTransactions
+GROUP BY ProductID;
+
+Query to track stockouts:
+
+
+SELECT ProductID
+FROM InventoryTransactions
+WHERE Quantity <= 0;
+
+Implementing Triggers or Stored Procedures:
+Example of a trigger to update inventory levels after a transaction:
+
+
+CREATE TRIGGER UpdateInventory
+AFTER INSERT ON InventoryTransactions
+FOR EACH ROW
+BEGIN
+    IF NEW.TransactionType = 'Sale' THEN
+        UPDATE Products
+        SET InventoryLevel = InventoryLevel - NEW.Quantity
+        WHERE ProductID = NEW.ProductID;
+    ELSEIF NEW.TransactionType = 'Replenishment' THEN
+        UPDATE Products
+        SET InventoryLevel = InventoryLevel + NEW.Quantity
+        WHERE ProductID = NEW.ProductID;
+    END IF;
+END;
+
+Analyzing Historical Inventory Data:
+Example query to identify slow-moving items:
+
+SELECT ProductID, AVG(Quantity) AS AvgQuantity
+FROM InventoryTransactions
+GROUP BY ProductID
+HAVING AvgQuantity < 10; 
+
+Generating Reports:
+Example report query to monitor inventory turnover:
+
+SELECT ProductID, SUM(Quantity) AS TotalSales
+FROM InventoryTransactions
+WHERE TransactionType = 'Sale'
+GROUP BY ProductID;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
